@@ -1,0 +1,76 @@
+<!-- <ion-content padding>
+	<ion-row>	
+		<ion-col col-10>
+    	<ion-item>
+        <ion-label>Enter  Name</ion-label>
+        <ion-input type="text" text-right [(ngModel)]="doc_name[0]" id="doc_name[0]" name="doc_name[0]" required></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col col-2>
+    	<button (click)="selectNo1(1);" ion-button><ion-icon style="color: #fff" name="md-add"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+
+  <ion-card *ngFor="let item of MySelect1; let i=index; ">
+    <ion-row >            
+      <ion-col col-10>
+        <ion-item>
+          <ion-label>Enter  Name</ion-label>
+          <ion-input type="text" text-right [(ngModel)]="doc_name[item]" id="doc_name[{{item}}]" name="doc_name[{{item}}]" required></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button (click)="selectNo1(0);"><ion-icon style="color: #fff" name="md-remove"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+
+    <ion-item>
+      <ion-label style="padding-left: 10px;">Enter Doc. Address</ion-label>
+      <ion-input type="text" text-right [(ngModel)]="doc_add[item]" name="doc_add[{{item}}]" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="padding-left: 10px;">Contact</ion-label>
+      <ion-input type="number" text-right [(ngModel)]="doc_cont[item]" name="doc_cont[{{item}}]" required></ion-input>
+    </ion-item>
+
+  </ion-card>
+</ion-content> -->
+
+<!-- 
+<ion-item *ngFor="let att of anArray; let idx = index">
+  <ion-label color="primary">{{att.label}}{{idx+1}}</ion-label>
+  <ion-input type="text"  text-right  [(ngModel)]="anArray[idx].value"></ion-input>
+</ion-item>
+
+<ion-item>
+<button (click)="Add()">Add More</button>
+<button slot="end" (click)="remove()">Remove</button>
+</ion-item>
+<button ion-button full  (click)="goTo()" >let's go</button>
+
+<ion-card *ngIf="data">
+<ion-item *ngFor="let att of anArray;">
+<div class="card-title">{{att.value}}</div>
+</ion-item>
+</ion-card> -->
+
+
+<ion-item>
+<ion-input Placeholder="Give some Number" [(ngModel)]="inp"></ion-input>
+<ion-button (click)="add()">Add</ion-button>
+</ion-item>
+
+
+<ion-item *ngFor="let att of anArray" class="item">
+  <ion-input [(ngModel)]="inp2" text-right></ion-input>
+</ion-item>
+<ion-button id="but" (click)="output()">Ok</ion-button>
+
+
+<ion-button (click)="see()">Check</ion-button>
+<div id="set1"></div>
+<div *ngFor=" let ad of number">
+
+  {{ad}}
+</div>
